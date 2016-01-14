@@ -100,6 +100,11 @@ def signUp():
         cursor.close()
         conn.close()
 
+@app.route('/logout')
+def logout():
+    session.pop('user',None)
+    return redirect('/')
+
 
 
 
